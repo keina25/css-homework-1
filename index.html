@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: white;
+      }
+      .rainbow {
+        height: 200px;
+        overflow: hidden;
+      }
+      .rainbow div {
+        overflow: hidden;
+      }
+      /* 这里的overflow: hidden;破除了margin的合并 */
+      .rainbow > div {
+        width: 400px;
+        height: 400px;
+        background: red;
+        margin: 10px;
+        border-radius: 50%;
+      }
+      /* 这里div是第一个div的意思 */
+      .rainbow > div > div {
+        background: hsl(60, 80%, 50%);
+        height: 380px;
+        margin: 10px;
+        border-radius: 50%;
+      }
+      .rainbow > div > div > div {
+        background: hsl(120, 80%, 50%);
+        height: 360px;
+        margin: 10px;
+        border-radius: 50%;
+      }
+      .rainbow > div > div > div > div {
+        background: hsl(180, 80%, 50%);
+        height: 340px;
+        margin: 10px;
+        border-radius: 50%;
+      }
+      .rainbow > div > div > div > div {
+        background: hsl(180, 80%, 50%);
+        height: 340px;
+        margin: 10px;
+        border-radius: 50%;
+      }
+      .rainbow > div > div > div > div {
+        background: hsl(240, 80%, 50%);
+        height: 320px;
+        margin: 10px;
+        border-radius: 50%;
+      }
+      .rainbow > div > div > div > div > div {
+        background: hsl(300, 80%, 50%);
+        height: 300px;
+        margin: 10px;
+        border-radius: 50%;
+      }
+      .rainbow > div > div > div > div > div > div {
+        background: hsl(330, 80%, 50%);
+        height: 280px;
+        margin: 10px;
+        border-radius: 50%;
+      }
+      .rainbow > div > div > div > div > div > div > div {
+        background: hsl(330, 80%, 100%);
+        height: 260px;
+        margin: 10px;
+        border-radius: 50%;
+      }
+      /* 这里做完后，把border删掉 */
+    </style>
+  </head>
+  <body>
+    <div class="rainbow">
+      <div>
+        <div>
+          <div>
+            <div>
+              <div>
+                <div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="彩虹练习.png"></a>
+    <!-- div>div>div>div>div>div+tab就会出现div包含div这样，如上表示；如果是并排的7个div的话，就是div*7+tab，就可以了 -->
+  </body>
+</html>
